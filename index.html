@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Recovery Companion is a between-visit patient support portal for osteopathic and manual therapy practices.">
+  <meta name="theme-color" content="#0f9c8b">
+  <title>Recovery Companion — Osteopath Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="prototype">PROTOTYPE DEMONSTRATION · FICTIONAL PATIENT DATA · NOT FOR REAL PATIENT INFORMATION</div>
+
+  <header class="site-header">
+    <a class="brand" href="#top"><span class="brand-mark">RC</span><span>Recovery Companion<small>OSTEOPATHIC CARE PORTAL</small></span></a>
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#demo">Demo Guide</a>
+      <a href="#features">Features</a>
+      <a href="#charts">Charts</a>
+      <a class="button compact" href="https://ai.studio/apps/52e2ae82-a3dd-4e19-8f56-0f6d6cb099e1" target="_blank" rel="noopener">Open live demo ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div>
+        <span class="eyebrow">Between-visit patient support</span>
+        <h1>Extend hands-on care <em>beyond the appointment.</em></h1>
+        <p class="lead">Recovery Companion gives an osteopathic practice one place to assign home exercises, capture 45-second check-ins, visualize progress, communicate securely, and publish patient education through newsletters, clinic articles, and social content.</p>
+        <div class="actions">
+          <a class="button" href="https://ai.studio/apps/52e2ae82-a3dd-4e19-8f56-0f6d6cb099e1" target="_blank" rel="noopener">Explore the demo ↗</a>
+          <a class="button secondary" href="#demo">Follow the walkthrough</a>
+          <button class="button secondary" onclick="window.print()">Print / Save as PDF</button>
+        </div>
+        <p class="fine">The current build uses a role switcher and fictional records so the complete experience can be demonstrated before production authentication is added.</p>
+      </div>
+
+      <div class="app-window" aria-label="Recovery Companion interface preview">
+        <aside><div class="mini-logo">RC</div><i></i><i></i><i></i><i></i><i></i></aside>
+        <div class="app-main">
+          <div class="app-title"><b>Exercise Library</b><span>+ Add Exercise</span></div>
+          <div class="search"></div>
+          <div class="exercise-grid">
+            <article><div class="figure">↕</div><b>Pelvic Tilts</b><small>Lower Back · Core</small></article>
+            <article><div class="figure">⌁</div><b>Cat-Cow Stretch</b><small>Spine · Mobility</small></article>
+            <article><div class="figure">↗</div><b>Wall Slides</b><small>Shoulder · Posture</small></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats shell" aria-label="Key benefits">
+      <article><strong>45 sec</strong><span>Typical patient check-in</span></article>
+      <article><strong>1 portal</strong><span>Recovery, communication, and clinic content</span></article>
+      <article><strong>0 installs</strong><span>Cloud-hosted and mobile friendly</span></article>
+    </section>
+
+    <section class="section shell" id="overview">
+      <div class="section-head"><span>What it solves</span><h2>A high-touch extension of care—without adding administrative weight.</h2><p>The application replaces scattered handouts, follow-up texts, exercise links, marketing tools, and progress spreadsheets with one simple patient and practitioner experience.</p></div>
+      <div class="cards three">
+        <article class="card"><div class="icon">01</div><h3>Patients know what to do</h3><p>Each patient receives a clear recovery plan, exercise visuals, goals, reminders, and a fast daily check-in.</p></article>
+        <article class="card"><div class="icon">02</div><h3>Practitioners see the trend</h3><p>Completion, comfort, goals, barriers, and structured flags are organized before the next appointment.</p></article>
+        <article class="card"><div class="icon">03</div><h3>The clinic stays connected</h3><p>Clinic Connect creates educational newsletters, clinic articles, service updates, and reusable social media content.</p></article>
+      </div>
+    </section>
+
+    <section class="section shell" id="demo">
+      <div class="section-head"><span>Interactive demonstration</span><h2>Simulating and setting up the patient portal login.</h2></div>
+      <div class="split">
+        <article class="dark-panel">
+          <h3>How to see the Patient Portal right now</h3>
+          <p>The current prototype uses a demo role switcher so you can experience both sides of the application instantly.</p>
+          <ol class="steps">
+            <li><div><b>Open the live demo</b><span>Launch Recovery Companion using any demo button.</span></div></li>
+            <li><div><b>Click “Patient Portal”</b><span>Use the switcher in the top-right corner. The interface changes immediately.</span></div></li>
+            <li><div><b>Choose a patient</b><span>Use the “Viewing” dropdown and select Liam O'Connor or Sophia Martinez.</span></div></li>
+          </ol>
+        </article>
+
+        <article class="role-demo">
+          <div class="switcher" role="tablist" aria-label="Demo role switch">
+            <button id="practitionerBtn" class="active" onclick="showRole('practitioner')">Practitioner</button>
+            <button id="patientBtn" onclick="showRole('patient')">Patient Portal</button>
+          </div>
+          <div id="roleContent">
+            <h3>Practitioner view</h3>
+            <p>View active patients, recovery trends, alerts, exercise plans, secure messages, reports, and Clinic Connect.</p>
+            <div class="mini-card"><b>Best first stop</b><span>Open Liam O'Connor, then select Goals to see the recovery chart.</span></div>
+            <div class="mini-card"><b>Marketing preview</b><span>Open Clinic Connect, then Analytics.</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="card login-card">
+        <h3>How a real login would be added</h3>
+        <div class="cards three plain">
+          <div><div class="icon">A</div><b>Firebase Authentication</b><p>Google sign-in, email and password, or secure email links with verification and session protection.</p></div>
+          <div><div class="icon">B</div><b>Role and data binding</b><p>Each account is mapped to a practitioner or patient profile and limited to the correct records.</p></div>
+          <div><div class="icon">C</div><b>Automatic redirect</b><p>The application reads the role and loads either the clinical dashboard or personal recovery timeline.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="charts">
+      <div class="section-head"><span>Where to find the charts</span><h2>Two types of analytics: patient recovery and clinic engagement.</h2></div>
+      <div class="cards two">
+        <article class="card">
+          <span class="tag">Clinical tracking</span><h3>Patient Recovery Progress</h3>
+          <div class="path"><i>Practitioner</i><b>→</b><i>Active Patients</i><b>→</b><i>Liam O'Connor</i><b>→</b><i>Goals</i></div>
+          <p>Scroll to the <strong>Dynamic Comfort Progress Graph</strong>. It plots changes over time across real-life goals such as walking comfortably or lifting a toddler.</p>
+          <p><strong>Demo note:</strong> a trajectory requires at least two check-ins. Liam already includes enough fictional data.</p>
+        </article>
+        <article class="card">
+          <span class="tag">Clinic marketing</span><h3>Clinic Connect Analytics</h3>
+          <div class="path"><i>Practitioner</i><b>→</b><i>Clinic Connect</i><b>→</b><i>Analytics</i></div>
+          <p>View newsletter opens, article views, booking-button clicks, video clicks, and campaign engagement.</p>
+          <p>The demonstration includes fictional campaign data such as the <strong>Summer Spinal Health</strong> newsletter.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" id="features">
+      <div class="section-head"><span>Core demonstration features</span><h2>The moments to highlight in an osteopath walkthrough.</h2></div>
+      <div class="feature-grid">
+        <article><span>✓</span><div><b>45-second patient check-in</b><p>Patients record exercise completion, comfort, progress, and concerns without a long survey.</p></div></article>
+        <article><span>✓</span><div><b>Clinical trend graphs</b><p>Visualize progress instead of relying on memory at a follow-up appointment.</p></div></article>
+        <article><span>✓</span><div><b>One-click progress reports</b><p>Create a print-ready summary of plans, goals, notes, and engagement.</p></div></article>
+        <article><span>✓</span><div><b>Structured practitioner flags</b><p>Surface worsening responses, missed check-ins, patient questions, and review dates.</p></div></article>
+        <article><span>✓</span><div><b>Clinic Connect</b><p>Create a newsletter, educational article, service announcement, and social package.</p></div></article>
+        <article><span>✓</span><div><b>Cloud-based delivery</b><p>No local installation or server management. Designed for desktop, tablet, and mobile.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section shell">
+      <div class="pitch"><span>The sole proprietor pitch</span><h2>“Increase patient retention by eliminating administrative friction.”</h2><p>Recovery Companion is not a compliance checklist. It is a high-touch extension of hands-on care. It replaces physical handouts, scattered texts, exercise emails, and separate marketing software with a single portal that supports follow-through in under a minute a day.</p></div>
+      <div class="cards three follow">
+        <article class="card"><div class="icon">⏱</div><h3>Protect practitioner time</h3><p>Structured questions and automatic flags prepare the practitioner before the next appointment.</p></article>
+        <article class="card"><div class="icon">↗</div><h3>Improve continuity</h3><p>Patients can always return to the correct exercise, goal, message, or educational article.</p></article>
+        <article class="card"><div class="icon">◎</div><h3>Reduce subscriptions</h3><p>Recovery plans, newsletters, clinic announcements, and analytics live in one system.</p></article>
+      </div>
+    </section>
+
+    <section class="section shell">
+      <div class="section-head"><span>Production roadmap</span><h2>What changes before real patients use it.</h2></div>
+      <div class="cards three">
+        <article class="card"><h3>1. Secure identity</h3><p>Replace demo switching with verified accounts, protected routes, and role-based permissions.</p></article>
+        <article class="card"><h3>2. Protected data</h3><p>Add Firestore security rules, audit history, consent controls, and clinic-specific boundaries.</p></article>
+        <article class="card"><h3>3. Clinical and legal review</h3><p>Review privacy, scope, emergency messaging, accessibility, email consent, and hosting before launch.</p></article>
+      </div>
+    </section>
+
+    <section class="cta shell">
+      <div><h2>See the complete care journey.</h2><p>Switch between practitioner and patient views and explore recovery plans, progress charts, messages, exercises, and Clinic Connect.</p></div>
+      <a class="button light" href="https://ai.studio/apps/52e2ae82-a3dd-4e19-8f56-0f6d6cb099e1" target="_blank" rel="noopener">Open Recovery Companion ↗</a>
+    </section>
+  </main>
+
+  <div class="disclaimer shell"><strong>Prototype notice:</strong> This demonstration uses fictional records and simulated role switching. It is not a medical device, does not diagnose or provide emergency triage, and should not contain real patient information. Production use requires appropriate authentication, privacy, security, consent, professional, legal, and hosting review.</div>
+
+  <footer><div class="shell"><strong>Recovery Companion</strong><span>Between-visit patient support · Interactive prototype presentation</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
